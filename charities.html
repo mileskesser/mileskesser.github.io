@@ -1,0 +1,96 @@
+<h1 align="center">Charities</h1>
+
+<a href="donors.html"><p align="center">Donors</a> |
+    <a href="donations.html">Donations</a> |
+    <a href="charities.html">Charities</a> |
+    <a href="projects.html">Projects</a>
+    <div id="browse" style="display: block">
+
+    <table border="1" cellpadding="5" align="center">
+        <!-- table header row -->
+        <tr>
+            <th></th>
+            <th></th>
+            <th>Charity ID</th>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Total Raised</th>
+        </tr>
+        <!-- charity 1 -->
+        <tr>
+            <td><a href="#" onClick="showform('update')">Edit</a></td>
+            <td><a href="#" onClick="showform('delete')">Delete</a></td>
+            <td align="center">1</td>
+            <td align="left">ASPCA</td>
+            <td align="left">New York, NY</td>
+            <td align="right">$ 1,000.00</td>
+        </tr>
+        <!-- charity 2 -->
+        <tr>
+            <td><a href="#" onClick="showform('update')">Edit</a></td>
+            <td><a href="#" onClick="showform('delete')">Delete</a></td>
+            <td align="center">2</td>
+            <td align="left">Marine Mammal Center</td>
+            <td align="left">Sausalito, CA</td>
+            <td align="right">$ 1,225.00</td>
+        </tr>
+        <!-- charity 3 -->
+        <tr>
+            <td><a href="#" onClick="showform('update')">Edit</a></td>
+            <td><a href="#" onClick="showform('delete')">Delete</a></td>
+            <td align="center">3</td>
+            <td align="left">American Red Cross</td>
+            <td align="left">Washington D.C.</td>
+            <td align="right">$ 300.00</td>
+        </tr>
+        <!-- charity 4 -->
+        <tr>
+            <td><a href="#" onClick="showform('update')">Edit</a></td>
+            <td><a href="#" onClick="showform('delete')">Delete</a></td>
+            <td align="center">4</td>
+            <td align="left">YMCA</td>
+            <td align="left">Geneva, Switzerland</td>
+            <td align="right">$ 500.00</td>
+        </tr>
+        <!-- charity 5 -->
+        <tr>
+            <td><a href="#" onClick="showform('update')">Edit</a></td>
+            <td><a href="#" onClick="showform('delete')">Delete</a></td>
+            <td align="center">5</td>
+            <td align="left">Doctors Without Borders</td>
+            <td align="left">New York, NY</td>
+            <td align="right">$ 500,000.00</td>
+        </tr>
+    </table>
+</div>
+
+<!-- Search Charity -->
+<h3 align="center">SEARCH FOR A CHARITY </h3>
+<p align="center">Find Charity details by entering the <strong>charity's name</strong></p>
+
+<form id="search-charity-form" method="POST" action="#">
+
+    <label for="input-name">
+        <p style="text-align:center">Name:
+    </label>
+    <input type="text" name="input-name" id="input-name">
+
+    <input type="submit">
+</form>
+
+<!-- ADD CHARITY -->
+<h3 align="center">ADD CHARITY </h3>
+<p align="center">To add a new charity, please enter the information below and click <strong>Submit</strong></p>
+
+<form id="add-charity-form" method="POST" action="#">
+
+    <label for="input-name">
+        <p style="text-align:center">Name:
+    </label>
+    <input type="text" name="input-name" id="input-name">
+
+    <label for="input-charity">Location: </label>
+    <input type="text" name="input-location" id="input-location">
+
+    <input type="submit">
+</form>
