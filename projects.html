@@ -1,0 +1,87 @@
+<h1 class="title" align="center">Projects</h1>
+
+<a href="donors.html"><p align="center">Donors</a> |
+    <a href="donations.html">Donations</a> |
+    <a href="charities.html">Charities</a> |
+    <a href="projects.html">Projects</a>
+    <div id="browse" style="display: block">
+
+    <table border="1" cellpadding="5" align="center">
+        <!-- table header row -->
+        <tr>
+            <th></th>
+            <th></th>
+            <th>Project ID</th>
+            <th>Name</th>
+            <th>Amount Needed</th>
+            <th>Amount Raised</th>
+        </tr>
+        <!-- project 1 -->
+        <tr>
+            <td><a href="#" onClick="showform('update')">Edit</a></td>
+            <td><a href="#" onClick="showform('delete')">Delete</a></td>
+            <td align="center">1</td>
+            <td align="left">Protecting Wildlife</td>
+            <td align="right">NULL</td>
+            <td align="right">NULL</td>
+        </tr>
+        <!-- project 2 -->
+        <tr>
+            <td><a href="#" onClick="showform('update')">Edit</a></td>
+            <td><a href="#" onClick="showform('delete')">Delete</a></td>
+            <td align="center">2</td>
+            <td align="left">Providing Hurricane Relief</td>
+            <td align="right">NULL</td>
+            <td align="right">NULL</td>
+        </tr>
+        <!-- project 3 -->
+        <tr>
+            <td><a href="#" onClick="showform('update')">Edit</a></td>
+            <td><a href="#" onClick="showform('delete')">Delete</a></td>
+            <td align="center">3</td>
+            <td align="left">Building Exercise Facilities</td>
+            <td align="right">NULL</td>
+            <td align="right">NULL</td>
+        </tr>
+        <!-- project 4 -->
+        <tr>
+            <td><a href="#" onClick="showform('update')">Edit</a></td>
+            <td><a href="#" onClick="showform('delete')">Delete</a></td>
+            <td align="center">4</td>
+            <td align="left">Humanitarian assisstance</td>
+            <td align="right">NULL</td>
+            <td align="right">NULL</td>
+        </tr>
+    </table>
+</div>
+
+<!-- search project -->
+<p align="center"><strong>SEARCH FOR A PROJECT</strong></p>
+<p align="center">To search for a project, please enter the information below and click <strong>Submit</strong></p>
+
+<form id="search-project-form" method="POST" action="#">
+
+    <label for="input-pname">
+        <p style="text-align:center">Project Name:
+    </label>
+    <input type="text" name="input-pname" id="input-pname">
+
+    <input type="submit">
+</form>
+
+<!-- ADD PROJECT -->
+<h3 align="center">ADD A PROJECT </h3>
+<p align="center">To add a new project, please enter project details and click <strong>Submit</strong></p>
+
+<form id="add-project-form" method="POST" action="#">
+
+    <label for="input-pname">
+        <p style="text-align:center">Name:
+    </label>
+    <input type="text" name="input-pname" id="input-pname">
+
+    <label for="input-amount">Amount Needed: </label>
+    <input type="text" name="input-amount" id="input-amount">
+
+    <input type="submit">
+</form>
