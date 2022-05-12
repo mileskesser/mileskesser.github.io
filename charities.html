@@ -1,9 +1,10 @@
 <h1 align="center">Charities</h1>
 
-    <a href="donors.html"><p align="center">Donors</a> |
+<a href="donors.html"><p align="center">Donors</a> |
     <a href="donations.html">Donations</a> |
     <a href="charities.html">Charities</a> |
-    <a href="projects.html">Projects</a>
+    <a href="projects.html">Projects</a> |
+    <a href="charities_has_projects.html">Charities Has Projects</a>
     <div id="browse" style="display: block">
 
     <table border="1" cellpadding="5" align="center">
@@ -31,7 +32,7 @@
             <td align="left">Marine Mammal Center</td>
             <td align="left">Sausalito, CA</td>
             <td align="right">$ 1,225.00</td>
-             <td><a href="#" onClick="showform('update')">Edit</a></td>
+            <td><a href="#" onClick="showform('update')">Edit</a></td>
             <td><a href="#" onClick="showform('delete')">Delete</a></td>
         </tr>
         <!-- charity 3 -->
@@ -68,14 +69,23 @@
 <h3 align="center">SEARCH FOR A CHARITY </h3>
 <p align="center">Find Charity details by entering the <strong>charity's name</strong></p>
 
-<form id="search-charity-form" method="POST" action="#">
+<form id="delete-donor-form" method="POST" action="#">
 
-    <label for="input-name">
-        <p style="text-align:center">Name:
+    <label for="input-donorID">
+        <p style="text-align:center">Charity ID:
     </label>
+    <input type="number" name="input-projID" id="input-projID">
+
+    <label for="input-charity">Name: </label>
     <input type="text" name="input-name" id="input-name">
 
-    <input type="submit">
+    <label for="input-amount"> Location: </label>
+    <input type="text" name="input-email" id="input-email" />
+
+    <label for="input-date">Total Raised: </label>
+    <input type="number" name="input-amount-raised" id="input-amount-raised">
+
+    <input type="submit" value="Search">
 </form>
 
 <!-- ADD CHARITY -->
@@ -84,13 +94,59 @@
 
 <form id="add-charity-form" method="POST" action="#">
 
-    <label for="input-name">
-        <p style="text-align:center">Name:
-    </label>
+    <label for="input-name"><p style="text-align:center">Name:</label>
     <input type="text" name="input-name" id="input-name">
 
     <label for="input-charity">Location: </label>
     <input type="text" name="input-location" id="input-location">
 
-    <input type="submit">
+    <label for="input-charity">Total Raised: </label>
+    <input type="number" name="input-total-raised" id="input-total-raised">
+
+    <input type="submit" value="Add">
+</form>
+
+<!-- update Charity -->
+<h3 align="center">UPDATE CHARITY DETAILS </h3>
+<p align="center">Enter the details you would like to update</p>
+
+<form id="delete-donor-form" method="POST" action="#">
+
+    <label for="input-donorID">
+        <p style="text-align:center">Charity ID:
+    </label>
+    <input type="number" name="input-projID" id="input-projID">
+
+    <label for="input-charity">Name: </label>
+    <input type="text" name="input-name" id="input-name">
+
+    <label for="input-amount"> Location: </label>
+    <input type="text" name="input-email" id="input-email" />
+
+    <label for="input-date">Total Raised: </label>
+    <input type="number" name="input-amount-raised" id="input-amount-raised">
+
+    <input type="submit" value="Search">
+</form>
+
+<!-- DELETE CHARITY -->
+<h3 align="center">DELETE CHARITY </h3>
+
+<form id="delete-charity-form" method="POST" action="#">
+
+    <label for="input-charityID">
+        <p style="text-align:center">Charity ID:
+    </label>
+    <input type="number" name="input-projID" id="input-projID">
+
+    <label for="input-charity">Name: </label>
+    <input type="text" name="input-name" id="input-name">
+
+    <label for="input-amount"> Location: </label>
+    <input type="text" name="input-location" id="input-location" />
+
+    <label for="input-date">Total Raised: </label>
+    <input type="number" name="input-total-raised" id="input-total-raised">
+
+    <input type="submit" value="Delete">
 </form>
