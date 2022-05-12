@@ -1,9 +1,10 @@
 <h1 class="title" align="center">Projects</h1>
 
-    <a href="donors.html"><p align="center">Donors</a> |
+<a href="donors.html"><p align="center">Donors</a> |
     <a href="donations.html">Donations</a> |
     <a href="charities.html">Charities</a> |
-    <a href="projects.html">Projects</a>
+    <a href="projects.html">Projects</a>    |
+    <a href="charities_has_projects.html">Charities Has Projects</a>
     <div id="browse" style="display: block">
 
     <table border="1" cellpadding="5" align="center">
@@ -20,7 +21,7 @@
         <tr>
             <td align="center">1</td>
             <td align="left">Protecting Wildlife</td>
-            <td align="right">$ 10,000.00</td>
+            <td align="right">$ 10,000</td>
             <td align="right">$ 0.00</td>
             <td><a href="#" onClick="showform('update')">Edit</a></td>
             <td><a href="#" onClick="showform('delete')">Delete</a></td>
@@ -29,7 +30,7 @@
         <tr>
             <td align="center">2</td>
             <td align="left">Providing Hurricane Relief</td>
-            <td align="right">$ 10,000.00</td>
+            <td align="right">$ 10,000</td>
             <td align="right">$ 0.00</td>
             <td><a href="#" onClick="showform('update')">Edit</a></td>
             <td><a href="#" onClick="showform('delete')">Delete</a></td>
@@ -38,7 +39,7 @@
         <tr>
             <td align="center">3</td>
             <td align="left">Building Exercise Facilities</td>
-            <td align="right">$ 10,000.00</td>
+            <td align="right">$ 10,000</td>
             <td align="right">$ 0.00</td>
             <td><a href="#" onClick="showform('update')">Edit</a></td>
             <td><a href="#" onClick="showform('delete')">Delete</a></td>
@@ -47,7 +48,7 @@
         <tr>
             <td align="center">4</td>
             <td align="left">Humanitarian assisstance</td>
-            <td align="right">$ 10,000.00</td>
+            <td align="right">$ 10,000</td>
             <td align="right">$ 0.00</td>
             <td><a href="#" onClick="showform('update')">Edit</a></td>
             <td><a href="#" onClick="showform('delete')">Delete</a></td>
@@ -56,17 +57,18 @@
 </div>
 
 <!-- search project -->
-<p align="center"><strong>SEARCH FOR A PROJECT</strong></p>
+<h3 align="center"><strong>SEARCH FOR A PROJECT</strong></h3>
 <p align="center">To search for a project, please enter the information below and click <strong>Submit</strong></p>
 
-<form id="search-project-form" method="POST" action="#">
+<form id="add-project-form" method="POST" action="#">
 
-    <label for="input-pname">
-        <p style="text-align:center">Project Name:
-    </label>
-    <input type="text" name="input-pname" id="input-pname">
+    <label for="input-pname"><p style="text-align:center">Project ID:</label>
+    <input type="number" name="input-projID" id="input-projID">
 
-    <input type="submit">
+    <label for="input-amount">Name: </label>
+    <input type="text" name="input-name" id="input-name" >
+
+    <input type="submit" value="Search">
 </form>
 
 <!-- ADD PROJECT -->
@@ -75,13 +77,47 @@
 
 <form id="add-project-form" method="POST" action="#">
 
-    <label for="input-pname">
-        <p style="text-align:center">Name:
-    </label>
+    <label for="input-pname"><p style="text-align:center">Name:</label>
     <input type="text" name="input-pname" id="input-pname">
 
     <label for="input-amount">Amount Needed: </label>
-    <input type="text" name="input-amount" id="input-amount">
+    <input type="number" name="input-amount" id="input-amount" min="1" step="any">
 
-    <input type="submit">
+    <input type="submit" value="Add">
+</form>
+<!-- UPDATE PROJECT -->
+<h3 align="center">UPDATE PROJECT </h3>
+
+<form align="center" id="delete-project-form" method="POST" action="#">
+    <label for="input-charity">Name: </label>
+    <input type="text" name="input-name" id="input-name">
+
+    <label for="input-amount"> Amount Needed: </label>
+    <input type="number" name="input-amount-needed" id="input-amount-needed" min="1" step="any" />
+
+    <label for="input-date">Amount Raised: </label>
+    <input type="number" name="input-amount-raised" id="input-amount-raised">
+
+    <input type="submit" value="Delete">
+</form>
+<!-- DELETE PROJECT -->
+<h3 align="center">DELETE PROJECT </h3>
+
+<form id="delete-project-form" method="POST" action="#">
+
+    <label for="input-projID">
+        <p style="text-align:center">Project ID:
+    </label>
+    <input type="number" name="input-projID" id="input-projID">
+
+    <label for="input-charity">Name: </label>
+    <input type="text" name="input-name" id="input-name">
+
+    <label for="input-amount"> Amount Needed: </label>
+    <input type="number" name="input-amount-needed" id="input-amount-needed" min="1" step="any" />
+
+    <label for="input-date">Amount Raised: </label>
+    <input type="number" name="input-amount-raised" id="input-amount-raised">
+
+    <input type="submit" value="Delete">
 </form>
