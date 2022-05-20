@@ -30,7 +30,7 @@ app.get('/', function(req, res){
         query1 = `SELECT * FROM Donors WHERE name LIKE "${req.query.name}%"`
     }
     db.pool.query(query1, function(error, rows, fields){
-        res.render('donors', {data: rows});
+        res.render('index', {data: rows});
     })
 });
 
